@@ -14,9 +14,25 @@ Tables Used:
 - Sales.Orders
 - Sales.OrderLines
 
-Expected Output:
-- List of top 5 customers with their CustomerID, CustomerName, and total amount spent
+Parameters:
+- Top N customers (currently hardcoded as 5)
 
+Performance Notes:
+- Ensure indexes on Sales.Orders.CustomerID and Sales.OrderLines.OrderID for faster joins.
+
+Possible Extensions:
+- Filter by date range on Orders.OrderDate
+- Show top customers by region or country
+
+Sample Output:
+CustomerID | CustomerName       | Total_Amount_Spent
+-----------|--------------------|-------------------
+23         | John Smith         | 1539.20
+56         | Alice Johnson      | 1340.75
+12         | Bob Lee            | 1285.10
+
+Related Patterns:
+- Pattern 002: Top Products Sold
 */
 
 SELECT TOP 5 
